@@ -1,0 +1,243 @@
+.home-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: #1f29378a;
+}
+
+.home-page .card-page .page {
+    max-width: 92%;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.home-page .card-page .page .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.home-page .card-page .page .section-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.home-page .card-page .page .section-header p {
+    font-size: 1.125rem;
+    color: #d1d5db;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.latest-posts-section {
+    width: 100%;
+    z-index: 10;
+}
+
+.home-page .card-page .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.home-page .card, .home-page .announcement-link.card {
+    background:rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    width: auto;
+    height: auto;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    
+}
+
+.home-page .announcement-link.card:visited,
+.home-page .announcement-link.card:active,
+.home-page .announcement-link.card:focus {
+    color: #fff;
+    text-decoration: none;
+}
+.home-page .card-page .grid-cards .card:hover,
+.home-page .card-page .grid-cards .announcement-link.card:hover {
+    border: 1px solid rgba(0, 198, 255, 0.5);
+    box-shadow: 0px 0px 15px rgba(0, 198, 255, 0.4);
+    animation: float 1.5s infinite ease-in-out ;
+    text-decoration: none;
+}
+
+.home-page .card .image-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.image-container img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;  
+    border-radius: 8px;
+}
+
+.post-details .post-date {
+    font-size: 0.9rem;
+    color: #06b6d4;
+    margin: .5rem 0;
+    font-weight: 500;
+}
+
+
+.latest-posts-section .btn{
+    padding: .5rem .8rem;
+    font-weight: 500;
+    /* margin: auto; */
+}
+
+.latest-posts-section .grid-cards h3{
+    margin-bottom: 1rem;
+}
+.home-page .card p {
+    font-size: .9rem;
+    line-height: 1.5rem;
+    text-align: left;
+    margin-bottom: .5rem;
+}
+
+.post-details .post-date {
+    font-size: 0.9rem;
+    color: #06b6d4;
+    margin: 0.5rem 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.home-page .latest-posts-section .view-post, .latest-blogs .read-more {
+    color: #06b6d4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+@media (max-width: 1280px) {
+
+    .home-page h1 {
+        font-size: 3.5rem;
+    }
+    .home-page .page1 p {
+        font-size: 1.15rem;
+    }
+
+    
+}
+
+@media (max-width: 1024px) {
+
+    .home-page h1 {
+        font-size: 3rem;
+    }
+    .home-page .page1 p {
+        font-size: 1.1rem;
+    }
+
+    .card-page .grid-cards {
+        gap: 1.1rem
+    }
+
+    .image-container img {
+        height: 160px;
+    }
+
+    .home-page .grid-cards h3 {
+        font-size: 1.125rem;
+    }
+
+    .home-page .card {
+        padding: 1.1rem;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .home-page .card-page .page {
+        max-width: 96%;
+    }
+
+    .home-page h1{
+        font-size: 2.25rem;
+    }
+    .home-page .page1 p {
+        font-size: 1rem;
+    }
+
+    .home-page .card-page .page .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .home-page .section-header h3 {
+        font-size: 1.5rem;
+    }
+
+    .home-page .card-page .page .section-header p {
+        font-size: 1rem;
+    }
+
+    
+    .home-page .card-page .grid-cards {
+        grid-template-columns: auto auto;
+    }
+    
+    .home-page .about-us-section.card-page .grid-cards,
+    .home-page .explore-us-section.card-page .grid-cards{
+        gap: 1.5rem;
+        grid-template-columns: auto;
+    }
+    
+
+}
+
+@media (max-width: 500px) {
+    .home-page .card-page .page {
+        max-width: 100%;
+    }
+
+    .home-page h1 {
+        font-size: 1.75rem;
+    }
+
+    .home-page .page1 p {
+        font-size: 0.9rem;
+    }
+
+    .home-page .card-page .grid-cards {
+        grid-template-columns: auto;
+        gap: 1.5rem;
+    }
+
+    .home-page .card {
+        padding: 1.3rem;
+    }
+}
+
+@media (max-width: 380px) {
+    
+    .home-page h1 {
+        font-size: 1.5rem;
+    }
+
+    .home-page .page1 p {
+        font-size: 0.85rem;
+    }
+}

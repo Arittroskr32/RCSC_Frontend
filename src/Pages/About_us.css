@@ -1,0 +1,251 @@
+.about-page {
+    width: 100%;
+}
+
+
+.about-cover{
+    color: #ffffff;
+    background-color: #1f29378a;
+}
+
+.about-page .page5{
+    padding: 2rem 0rem;
+    position: relative;
+    text-align: center;
+    max-width: 70rem;
+    margin: auto;
+}
+
+.about-page .page5 .subtitle{
+    font-size: 2.5rem;
+    margin-bottom: 4vh;
+    font-family: auto;
+}
+
+.about-page .odd-bg{
+    padding: 0;
+}
+
+.about-page .page5 .achivement-card{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.about-page .page5 .achivement-card .card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    backdrop-filter: saturate(180%) blur(12px);
+    width: 100%;
+    height: 25vh;
+}
+
+.about-page .page5 .achivement-card .card.expanded {
+  height: fit-content;
+}
+
+.about-page .page5 .achivement-card .card-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.about-page .page5 .achivement-card .card p{
+    text-align: left;
+}
+
+.about-page .page5 .achivement-card .icon-container {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: rgba(6, 182, 212, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.about-page .page5 .achivement-card .icon-container svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: #06b6d4;
+  }
+
+.about-page .page5 .achivement-card .a-card{
+    background-color: #1f2937;
+    border-radius: .5rem;
+    padding: 1.5rem;
+    border: 1px solid #374151;
+}
+
+.about-page .page7{
+    max-width: 92vw;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+@media (max-width: 800px) {
+    .outer-container {
+        left: 0%;
+        transform: translateX(0);
+    }
+
+    .about-page .page5{
+        max-width: 640px;
+        padding: 3rem 2rem;
+    }
+    .about-page .page5 .achivement-card .card{
+        height: 22vh;
+    }
+
+    .about-page .page5 .achivement-card .card p{
+        font-size: 0.9rem;
+    }
+    .about-page h1.title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .about-page .details {
+        font-size: 1.18rem;
+    }
+
+    .about-page h2.subtitle {
+        font-size: 1.7rem;
+    }
+
+    .about-page .grid-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .about-page .history-carddeck {
+        flex-direction: row-reverse;
+    }
+    .about-page .page-line{
+        left: 0;
+    }
+    .about-page .outer-container {
+        left: 0;
+    }
+
+    .about-page .small-line ,
+    .about-page .history-carddeck:nth-child(even) .small-line{
+        left: 0;
+        transform: translate(0%, -50%);
+        width: 10rem;
+    }
+
+    .about-page .history-card {
+        width: 80%;
+    }
+    .about-page .misson-grid {
+        grid-template-columns:  1fr;
+    }
+    
+
+    .about-page .frontpage , .about-page .page , .about-page .page7 {
+        max-width: 640px;
+        padding: 3rem 2rem;
+    }
+
+}
+
+@media (max-width: 1024px) {
+  .about-page .page5 .achivement-card {
+    gap: 1rem;
+  }
+  .about-page .page5 .achivement-card .card {
+    padding: 1rem;
+    height: 18vh;
+  }
+  .about-page .page5 .achivement-card .card p {
+    font-size: 0.95rem;
+  }
+  .about-page .page5 .subtitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-page .page5 {
+    padding: 1.2rem 0;
+  }
+  .about-page .page5 .achivement-card {
+    gap: 0.7rem;
+  }
+  .about-page .page5 .achivement-card .card {
+    padding: 0.7rem;
+    border-radius: 6px;
+    height: 16vh;
+  }
+  .about-page .page5 .achivement-card .card p {
+    font-size: 0.8rem;
+  }
+  .about-page .page5 .subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 2vh;
+  }
+}
+
+
+@media (max-width: 500px) {
+    
+    .about-page .history-card {
+        width: 92%;
+    }
+
+    .about-page .page5 .achivement-card .card{
+        height: 32vh;
+    }
+    .about-page .page5 .achivement-card .card p{
+        font-size: 0.85rem;
+    }
+
+    .about-page .page5 h2.subtitle, .about-page .page7 h2.subtitle{
+        font-size: 1.5rem;
+    }
+    .about-page .page5 .achivement-card .card p{
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 400px) {
+   
+
+    .about-page .blank,
+    .about-page .small-line ,
+    .about-page .history-carddeck:nth-child(even) .small-line{
+        display: none;
+    }
+
+    .about-page .outer-container{
+        top: 0;
+        left: 50%;
+        transform: translate(-50% , -50%);
+        z-index: 50;
+    }
+
+    .about-page .history-carddeck:first-child .outer-container{
+        display: none;
+    }
+
+    .about-page .history-lane {
+        gap: 3rem;
+    }
+
+    .about-page .history-card {
+        width: 100%;
+    }
+
+    .about-page .page-line{
+        left: 50%;
+    }  
+}

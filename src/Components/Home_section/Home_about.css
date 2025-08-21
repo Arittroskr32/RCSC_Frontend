@@ -1,0 +1,141 @@
+.Home_about{
+    width: 100vw;
+}
+.Home_about .about-us-section {
+    width: 100%;
+    z-index: 10;
+}
+
+.Home_about .card-page .page {
+    max-width: 92%;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+
+.Home_about .card-page .page .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.Home_about .card-page .page .section-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.Home_about .card-page .page .section-header p {
+    font-size: 1.125rem;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.Home_about .card-page .grid-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+
+.Home_about .card-head{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.Home_about .icon-container {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: rgba(6, 182, 212, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+ 
+.Home_about .icon-container svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #06b6d4;
+}
+
+.Home_about .grid-cards h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700; 
+}
+
+.Home_about .card p{
+    font-size: .9rem;
+    line-height: 1.5rem;
+    text-align: left;
+    margin-bottom: .5rem;
+}
+
+@media (max-width: 1024px) {
+    .Home_about{
+        width: 100vw;
+    }
+    .Home_about .about-us-section .page{
+        max-width: 92%;
+        margin: auto;
+        padding: 4rem 2rem;
+    }
+    .Home_about .grid-cards {
+      gap: 1rem;
+    }
+    .Home_about .grid-cards .card {
+        padding: 1.1rem;
+        width: auto;
+    }
+}
+
+@media (max-width: 800px){
+    .Home_about .card-page .page .section-header h2{
+        font-size: 1.8rem;
+    }
+    .Home_about .card-page .page .section-header p {
+        font-size: 1rem;
+    }
+    .Home_about .card-page .page{
+        max-width: 96%;
+    }
+    .about-us-section.card-page .grid-cards{
+        gap: 1.5rem;
+        grid-template-columns: auto;
+    }
+}
+
+@media (max-width: 500px){
+    .Home_about .card-page .page .section-header h2{
+        font-size: 1.4rem;
+    }
+    .Home_about .card-page .page .section-header p {
+        font-size: 0.85rem;
+    }
+    .Home_about .about-us-section .page {
+        max-width: 94%;
+        padding: 4rem 1rem;
+    }
+    .Home_about .grid-cards .card h3{
+        font-size: 1.2rem;
+    }
+    .Home_about .grid-cards .card p{
+        font-size: 0.85rem;
+    }
+    .Home_about .icon-container {
+        width: 2rem;
+        height: 2rem;
+    }
+}

@@ -1,0 +1,320 @@
+/* Base styles */
+.frontpage-wrapper {
+  width: 100%;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  box-sizing: border-box;
+}
+
+.frontpage.page {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background: none;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 70px);
+  max-width: 100vw;
+  margin: 0;
+  padding: 0 4vw;
+  box-sizing: border-box;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.frontpage-content {
+  flex: 1 1 20%;
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.frontpage .title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.frontpage .details {
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: 2.2rem;
+  line-height: 1.7;
+  text-align: left;
+  max-width: 600px;
+}
+
+.frontpage-img {
+  flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  max-width: 50%;
+  height: 100%;
+  padding: 2.5rem 2rem;
+  box-sizing: border-box;
+}
+
+.frontpage-img img {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 24px;
+  max-width: 36rem;
+}
+
+/* What We Do Section */
+.header_part .page2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 2rem 0;
+  max-width: 56rem;
+  margin: auto;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.header_part h2.subtitle {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 2.5rem;
+  line-height: 2.25rem;
+  max-width: 90vw;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header_part .page2 p.details {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header_part .grid-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  box-sizing: border-box;
+}
+
+.header_part .card {
+  color: #f1f5f9;
+  /* Updated glassmorphism card styling for cyan/dark theme */
+  background: rgba(255, 255, 255, 0.05); /* subtle white glass effect */
+  border: 1px solid rgba(59, 206, 246, 0.3); /* cyan border */
+  padding: 1.5rem;
+  border-radius: 12px; /* increased radius for smoother corners */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  backdrop-filter: blur(10px); /* glass blur */
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.2); /* subtle cyan shadow */
+}
+
+.header_part .card:hover {
+  transform: translateY(-8px);
+  border: 1px solid rgba(59, 193, 246, 0.8); /* stronger cyan border */
+  box-shadow:
+    0 8px 32px rgba(59, 199, 246, 0.3),
+    0 0 20px rgba(59, 202, 246, 0.2); /* glowing cyan shadow */
+  background: rgba(30, 41, 59, 0.1); /* slightly darker glass on hover */
+  animation: float 1.5s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.header_part .card-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header_part .icon-container {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(6, 182, 212, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+}
+
+.header_part .icon-container svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #06b6d4;
+}
+
+.header_part .card-head h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.header_part .card p {
+  color : #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: left;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .frontpage-wrapper {
+    padding: 1.5rem auto;
+    border-radius: 1.2rem;
+  }
+  .frontpage.page {
+    /* flex-direction: column; */
+    border-radius: 1.2rem;
+    min-height: 100vh;
+    height: auto;
+  }
+  .frontpage-content {
+    padding: 3.5rem 0.7rem 3.5rem 2rem;
+  }
+  .frontpage-img {
+    padding: 3.5rem 2rem 3.5rem 0.7rem;
+  }
+  .about-img-border {
+    width: 100%;
+    min-height: 180px;
+    max-height: 260px;
+  }
+  .frontpage .title {
+    font-size: 2.4rem;
+  }
+  .frontpage .details {
+    font-size: 1rem;
+  }
+  .header_part h2.subtitle {
+    font-size: 2rem;
+  }
+  .header_part .page2 p.details {
+    font-size: 1rem;
+  }
+  .header_part .card-head h3 {
+    font-size: 1.05rem;
+  }
+  .header_part .card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .frontpage.page {
+    flex-direction: column;
+    height: auto;
+    min-height: unset;
+    padding: 4vw 2vw;
+    width: 90vw;
+    max-width: 90vw;
+  }
+  .frontpage-content {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+  }.frontpage-img {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0rem 2rem 2rem;
+  }
+  .frontpage-img {
+    margin-top: 2rem;
+    justify-content: center;
+  }
+  .frontpage-img img {
+    height: auto;
+    min-height: 220px;
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .header_part .frontpage h1 {
+    font-size: 2rem;
+  }
+  .header_part .frontpage p {
+    font-size: 1rem;
+  }
+  .header_part .page2 h2 {
+    font-size: 1.5rem;
+  }
+  .header_part .page2 p.details {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .header_part .page {
+    padding: 1rem 0;
+    padding-top: 2vh;
+  }
+  .header_part h2.subtitle {
+    margin-bottom: 1rem;
+  }
+  .header_part .page2 {
+    padding-top: 4vh;
+  }
+}
+
+@media (max-width: 500px) {
+  .header_part .page2 .grid-cards {
+    grid-template-columns: 1fr;
+  }
+  .header_part .frontpage h1 {
+    font-size: 1.35rem;
+  }
+  .header_part .frontpage p {
+    font-size: 0.85rem;
+  }
+  .frontpage .details {
+    margin-bottom: 0;
+  }
+  .header_part h2.subtitle {
+    margin-bottom: 0.95rem;
+  }
+  .header_part .page2 p.details {
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: inherit;
+  }
+  .header_part .card p {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+    text-align: left;
+  }
+}

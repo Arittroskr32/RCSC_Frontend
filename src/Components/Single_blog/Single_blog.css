@@ -1,0 +1,271 @@
+/* Single_blog.css */
+.blog_single {
+  width: 100vw;
+  background-color: #1f29378a;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Blog container */
+.single-blog-container {
+  max-width: 850px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: rgba(30, 41, 59, 0.75); /* glassmorphism effect */
+  backdrop-filter: blur(12px);
+  color: white;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  border-radius: 12px;
+  font-family: 'Inter', sans-serif;
+  padding-top: 6vh;
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Reading progress bar */
+.progress-wrap {
+  height: 4px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg,#60a5fa,#3b82f6);
+  width: 0%;
+  transition: width 120ms linear;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Blog header */
+/* Hero */
+.blog-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.hero-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.hero-controls {
+  width: 100%;
+}
+
+.author-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.author-block { display: flex; flex-direction: column; }
+
+.rcsc-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+  object-fit: cover;
+  filter: drop-shadow(0 6px 18px rgba(59,130,246,0.18));
+}
+
+.author-name {
+  font-size: 0.98rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.blog-date {
+  font-size: 0.82rem;
+  color: #bcd4ff;
+  margin: 0;
+}
+
+/* Blog Title */
+.blog-title {
+  font-size: 1.8rem;
+  line-height: 1.15;
+  margin: 0.4rem 0 0.2rem 0;
+  color: #f8fafc;
+  letter-spacing: -0.2px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Blog Image */
+.blog-image {
+  width: 100%;
+  border-radius: 10px;
+  margin: 1.4rem 0;
+  display: block;
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.blog-image img:hover {
+  transform: scale(1.02);
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.image-caption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+/* Blog description */
+.blog-body {
+  display: block;
+}
+
+.blog-content .blog-description,
+.blog-description {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-top: 0.6rem;
+  margin-bottom: 1.4rem;
+  color: #e6eef8;
+  word-wrap: break-word;
+}
+
+/* Comments */
+
+/* Tags */
+.tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.6rem;
+}
+.tag {
+  background: rgba(59,130,246,0.12);
+  color: #bde0ff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.82rem;
+}
+
+/* Comment Form */
+
+/* Footer */
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2rem;
+  border-top: 1px solid rgba(148,163,184,0.06);
+  padding-top: 0.8rem;
+}
+
+.small-muted {
+  color: #9fb7d8;
+  font-size: 0.9rem;
+}
+
+/* Back button */
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 0.9rem;
+  font-size: 0.95rem;
+  color: #3b82f6;
+  background: rgba(30,41,59,0.6);
+  border: 1px solid rgba(59,130,246,0.14);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.back-button:hover { transform: translateY(-2px); }
+
+/* share-button removed per request */
+
+/* Loading */
+.loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #60a5fa;
+}
+
+/* Responsiveness */
+@media(max-width:800px) {
+  .single-blog-container {
+    padding-top: 10vh;
+  }
+}
+
+@media(max-width:500px) {
+  .single-blog-container {
+    margin: 0;
+    padding-top: 9vh;
+  }
+  .blog_single {
+    min-height: 105vh;
+  }
+  .blog-image img {
+    width: 90%;
+  }
+  .rcsc-logo {
+    width: 40px;
+    height: 40px;
+  }
+  .author-name {
+    font-size: 0.9rem;
+  }
+  .blog-date {
+    font-size: 0.7rem;
+  }
+  .blog-title {
+    font-size: 1.2rem;
+  }
+  .blog-description {
+    font-size: 0.85rem;
+  }
+  .comments-title {
+    font-size: 1rem;
+  }
+  .comment-profile-pic {
+    width: 28px;
+    height: 28px;
+    margin-right: 5px;
+  }
+  .comment strong {
+    font-size: 0.85rem;
+  }
+  .comment p {
+    font-size: 0.8rem;
+  }
+  .comment-start h2 {
+    margin: 4vh 4vw;
+    font-size: 1rem;
+  }
+}
+
+@media(max-width:380px) {
+  .blog-image img {
+    width: 100%;
+  }
+}

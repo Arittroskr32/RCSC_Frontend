@@ -1,0 +1,337 @@
+/* Added dark blue gradient background theme */
+.About_history {
+  min-height: 100vh;
+  color: #f1f5f9;
+}
+
+/* Base Page Styles */
+.About_history .page {
+  padding: 2rem 0;
+  max-width: 56rem;
+  margin: auto;
+  position: relative;
+}
+
+/* History Lane Container */
+.About_history .history-lane {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  overflow: visible;
+  padding-top: 2.5rem;
+}
+
+/* Subtitle */
+.About_history .subtitle {
+  font-size: 2.5rem;
+  text-align: center;
+  font-family: auto;
+  /* Enhanced subtitle styling for dark theme */
+  color: #e2e8f0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 2rem;
+}
+
+/* Vertical Timeline Line */
+.About_history .page-line {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 2.5rem;
+  bottom: 0;
+  width: 0.25rem;
+  background: #4b5563;
+  border-radius: 2px;
+}
+
+/* History Card Deck */
+.About_history .history-carddeck {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Alternate card deck direction for even items */
+.About_history .history-carddeck:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/* Small connecting line between cards */
+.About_history .small-line {
+  width: 2.3rem;
+  height: 4px;
+  /* Updated connecting line color for dark theme */
+  background: #4b5563;
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  /* box-shadow: 0 0 6px rgba(59, 130, 246, 0.3); */
+}
+
+/* Adjust small line for even cards */
+.About_history .history-carddeck:nth-child(even) .small-line {
+  left: 52%;
+}
+
+/* Circle container for timeline dots */
+.About_history .outer-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+/* Timeline circle */
+.About_history .circle {
+  width: 32px;
+  height: 32px;
+  /* Updated circle styling for dark blue theme */
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  border-radius: 50%;
+  border: 4px solid #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  /* box-shadow: 0 0 12px rgba(59, 130, 246, 0.5); */
+}
+
+/* Inner circle */
+.About_history .inner-circle {
+  width: 8px;
+  height: 8px;
+  background-color: #f1f5f9;
+  border-radius: 50%;
+}
+
+/* History Card */
+.About_history .history-card {
+  z-index: 10;
+  width: 46%;
+}
+
+/* Card styling */
+.About_history .card {
+  /* Enhanced glassmorphism card styling for dark blue theme */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(59, 184, 246, 0.3);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  backdrop-filter: blur(10px);
+  width: auto;
+  height: fit-content;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card hover effect */
+.About_history .card:hover {
+  transform: translateY(-8px);
+  border: 1px solid rgba(59, 193, 246, 0.8); /* stronger cyan border */
+  box-shadow:
+    0 8px 32px rgba(59, 199, 246, 0.3),
+    0 0 20px rgba(59, 202, 246, 0.2); /* glowing cyan shadow */
+  background: rgba(30, 41, 59, 0.1); /* slightly darker glass on hover */
+  animation: float 1.5s infinite ease-in-out;
+}
+
+/* Floating animation keyframes */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Year text */
+.About_history .history-card .year {
+  /* Updated year text color for dark theme */
+  color: #06b6d4;
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+/* Title text */
+.About_history .history-card .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  /* Added title color for dark theme */
+  color: #e2e8f0;
+}
+
+/* Added description text styling for dark theme */
+.About_history .history-card .description {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Mission & Vision Grid */
+.About_history .misson-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem 0rem;
+}
+
+/* Mission & Vision Card Titles */
+.About_history .page4 .misson-grid .card h3 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  /* Updated mission/vision title color for dark theme */
+  color: #0ea5e9;
+}
+
+/* Added mission/vision description styling for dark theme */
+.About_history .page4 .misson-grid .card .des {
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  display: block;
+  margin: 2rem auto;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  /* Updated toggle button styling for dark theme */
+  color: #60a5fa;
+  background: rgba(30, 41, 59, 0.7);
+  border: 2px solid #3b82f6;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.02s ease;
+  backdrop-filter: blur(10px);
+}
+
+.toggle-btn:hover {
+  /* Enhanced toggle button hover for dark theme */
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Responsive Styles */
+@media (max-width: 800px) {
+  .About_history .page {
+    max-width: 640px;
+    padding: 3rem 2rem;
+  }
+  .About_history h2.subtitle {
+    font-size: 1.7rem;
+  }
+  .About_history .history-carddeck {
+    flex-direction: row-reverse;
+  }
+  .About_history .outer-container {
+    left: 0;
+  }
+  .About_history .history-card {
+    width: 80%;
+  }
+  .About_history .small-line,
+  .About_history .history-carddeck:nth-child(2n) .small-line {
+    left: 0;
+    transform: translate(0%, -50%);
+    width: 10rem;
+  }
+  .About_history .page-line {
+    left: 0;
+  }
+  .About_history .misson-grid {
+    grid-template-columns: 1fr;
+  }
+  .About_history .vision,
+  .About_history .misson {
+    height: 190px;
+  }
+}
+
+@media (max-width: 500px) {
+  .About_history .history-card {
+    width: 100%;
+  }
+  .About_history .history-lane {
+    gap: 3rem;
+  }
+  .About_history .history-carddeck:first-child .outer-container {
+    display: none;
+  }
+  .About_history .outer-container {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+  }
+  /* Hide small connecting lines completely in mobile view */
+  .About_history .small-line {
+    display: none !important;
+  }
+  /* Hide main timeline line completely in mobile view */
+  .About_history .page-line {
+    left: 50%;
+    display: none !important;
+  }
+  /* Updated to target last visible card properly and removed animations */
+
+  .About_history .history-lane > .history-carddeck:not(:nth-last-child(2))::after {
+    content: "";
+    position: absolute;
+    bottom: -3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 3rem;
+    background: #3b82f6;
+    z-index: 1;
+  }
+  /* Disable all animations and transitions for mobile */
+  .About_history .card {
+    transition: none !important;
+    animation: none !important;
+  }
+  .About_history .toggle-btn {
+    transition: none !important;
+  }
+  .About_history .toggle-btn:hover {
+    transform: none !important;
+  }
+  .About_history .history-card .card p {
+    font-size: 0.85rem;
+  }
+  .About_history h2.subtitle {
+    font-size: 1.5rem;
+  }
+  .About_history .page4 .misson-grid .card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+  }
+  .About_history .page4 .misson-grid .card p {
+    font-size: 0.85rem;
+  }
+  .About_history .vision,
+  .About_history .misson {
+    height: 220px;
+  }
+}

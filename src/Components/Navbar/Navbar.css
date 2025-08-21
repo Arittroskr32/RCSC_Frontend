@@ -1,0 +1,330 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent horizontal scroll caused by off-screen transformed sidebar */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Navbar container */
+.navbar {
+  font-family: sans-serif;
+  background-color: rgb(17 24 39);
+  padding: 1rem 2rem;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  border-bottom: 1px solid #06b6d4;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  transition: padding 0.3s ease;
+}
+
+/* Left side: logo and title */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.nav-left img {
+  width: 50px;
+  height: auto;
+  max-height: 60px;
+  transition: width 0.3s ease;
+}
+
+.nav-left h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  transition: font-size 0.3s ease;
+}
+
+/* Right side container */
+.nav-right {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 1.5rem;
+  flex-wrap: nowrap;
+  overflow: visible;
+}
+
+/* Desktop menu */
+.all-menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  scroll-behavior: smooth;
+}
+
+.all-menu::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.all-menu li {
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+  flex-shrink: 0;
+}
+
+.all-menu li:hover {
+  transform: scale(1.05);
+}
+
+.all-menu li a {
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  white-space: nowrap;
+}
+
+
+.all-menu li a:hover {
+  color: #22d3ee;
+}
+
+.all-menu li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: #22d3ee;
+  border-radius: 4px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.all-menu li a:hover::after {
+  transform: scaleX(1);
+}
+
+.all-menu li a.active,
+.sidebar ul li a.active {
+  color: #06b6d4;
+}
+
+/* Sidebar (mobile menu) */
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 240px;
+  max-width: 80vw;
+  height: 100vh;
+  background-color: rgb(17 24 39);
+  padding: 2rem 1.5rem;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.3);
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+  z-index: 999;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  opacity: 1;
+  display: flex;
+}
+
+.sidebar i.bx-x {
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 2rem;
+  user-select: none;
+}
+
+.sidebar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.sidebar ul li {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  transition: color 0.3s ease-in-out;
+}
+
+.sidebar ul li:hover {
+  color: #22d3ee;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Menu button (hamburger) */
+.menu {
+  display: none;
+  cursor: pointer;
+  color: white;
+  user-select: none;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.menu i.bx-menu {
+  font-size: 1.8rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.menu:hover i.bx-menu,
+.menu:hover h3 {
+  color: #22d3ee;
+}
+
+.menu h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  white-space: nowrap;
+}
+
+
+/* 1280px */
+@media (max-width: 1280px) {
+  .navbar {
+    padding: 18px;
+  }
+  .all-menu li {
+    padding: .5rem .6rem;
+  }
+  .all-menu {
+    gap: .5rem;
+  }
+  .nav-left h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* 1024px */
+@media (max-width: 1024px) {
+  .nav-left {
+    gap: .5rem;
+  }
+  .nav-left h1 {
+    font-size: 18px;
+  }
+  .all-menu li {
+    padding: .5rem .25rem;
+  }
+  .all-menu {
+    gap: .3rem;
+  }
+  .all-menu li a {
+    font-size: 14px;
+  }
+  .nav-left img {
+    width: 46px;
+  }
+}
+
+/* Mobile and small tablets: keep navbar fixed so it remains visible while scrolling */
+@media (max-width: 1024px) {
+  .nav-left h1 {
+    font-size: 1.5rem;
+  }
+  .all-menu {
+    display: none;
+  }
+  .menu {
+    display: flex;
+    position: absolute;
+    right: 1rem;
+  }
+  /* Keep sidebar hidden by default; only show when the .open class is added. */
+  .sidebar ul {
+    flex-direction: column;
+    gap: 0;
+  }
+  .sidebar ul li {
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid #06b6d4;
+    border-radius: 0;
+  }
+  .sidebar ul li a {
+    font-size: 15px;
+  }
+  .nav-left img {
+    width: 40px;
+  }
+
+  /* Make navbar fixed on mobile so it stays visible while scrolling. Add top padding
+     to the body so page content isn't hidden under the fixed navbar. */
+  .navbar {
+    position: sticky !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    z-index: 100 !important; /* keep below sidebar (999) */
+  }
+
+
+}
+
+/* 500px */
+@media (max-width: 500px) {
+  .nav-left h1 {
+    font-size: 1.25rem;
+  }
+  .sidebar ul li a {
+    font-size: 14px;
+  }
+}
+
+/* 380px */
+@media (max-width: 380px) {
+  .nav-left img {
+    width: 40px;
+  }
+  .nav-left h1 {
+    font-size: 1.02rem;
+  }
+  .sidebar ul li a {
+    font-size: 13px;
+  }
+}
+
+/* 320px */
+@media (max-width: 320px) {
+  .nav-left h1 {
+    font-size: .9rem;
+  }
+}

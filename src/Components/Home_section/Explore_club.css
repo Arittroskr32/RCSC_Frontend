@@ -1,0 +1,141 @@
+.Explore_club{
+    width: 100vw;
+}
+
+.Explore_club .explore-us-section {
+    width: 100%;
+    z-index: 10;
+}
+
+.Explore_club .card-page .page {
+    max-width: 92%;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+}
+.Explore_club .card-page .page .section-header{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.Explore_club .card-page .page .section-header h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+.Explore_club .card-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.Explore_club .card-head .icon-container {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    background-color: rgba(6, 182, 212, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+}
+
+.Explore_club .card-head .icon-container svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #06b6d4;
+  }
+
+.Explore_club .card-page .page .section-header p {
+    font-size: 1.125rem;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.Explore_club .card-page .grid-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.Explore_club .card-page .grid-cards .card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, border 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    cursor: default;
+    backdrop-filter: blur(5px);
+    width: auto;
+    height: auto;
+}
+
+.Explore_club .card-page.latest-blogs .page .section-header {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.Explore_club .latest-blogs .section-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Explore_club .latest-blogs .view-all {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.Explore_club .latest-posts-section .view-post,
+.Explore_club .latest-blogs .read-more {
+    color: #06b6d4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.Explore_club .read-more:hover {
+    color: #1997aa;
+}
+
+.Explore_club .latest-blogs .grid-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 800px) {
+    .Explore_club .about-us-section.card-page .grid-cards,.Explore_club .explore-us-section.card-page .grid-cards {
+      gap: 1.5rem;
+      grid-template-columns: auto;
+    }
+    .Explore_club .card-page .grid-cards{
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (max-width: 500px){
+    .Explore_club .card-page .page {
+        max-width: 92%;
+        margin: 0 auto;
+        padding: 1rem 1rem;
+    }
+    .Explore_club .card-head .icon-container {
+        width: 2rem;
+        height: 2rem;
+    }
+    .Explore_club .card-head .icon-container svg {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    .Explore_club .card-page .page .section-header h2 {
+        font-size: 1.4rem;
+    }
+    .Explore_club .card-page .grid-cards {
+        grid-template-columns: auto;
+        gap: 1.5rem;
+    }
+}

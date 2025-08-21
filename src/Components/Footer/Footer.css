@@ -1,0 +1,255 @@
+/* Add gap after envelope icon in newsletter form */
+.social form svg {
+  margin-right: 8px;
+}
+.about.col .footer_logo {
+  width: 180%;
+  max-width: 180px;
+  height: auto;
+  display: block;
+  margin: 0 0 16px 0;
+  object-fit: contain;
+  margin-left: -10px;
+}
+.footer {
+    width: 100%;
+    background: linear-gradient(to right, #00093c, #2d0b00);
+    padding: 60px 0 10px;
+    border-top-left-radius: 95px;
+    font-size: 13px;
+    line-height: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ccc;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.row {
+    width: 86%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex-basis: 26%;
+    padding: 10px;
+}
+
+.col:nth-child(2) {
+    flex-basis: 14%;
+}
+
+.col:nth-child(3) {
+    flex-basis: 14%;
+    padding-left: 4%;
+    padding-right: 0;
+}
+
+.col h3 {
+    width: fit-content;
+    margin: 8px 0 30px;
+    position: relative;
+    color: white;
+}
+
+.contact p {
+    padding: 3.1px 0px;
+}
+
+.email {
+    width: fit-content;
+    border-bottom: 1px solid #ccc;
+    margin: 13px 0px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.phone-no {
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+}
+
+.footer ul li {
+    list-style: none;
+    margin-bottom: 0;
+    text-align: left;
+    border: none;
+    background: none;
+    padding: 2px 0;
+}
+
+.footer ul li a{
+    text-decoration: none;
+    color: #ccc;
+    position: relative;
+    transition: color 0.3s ease-in-out; 
+    font-size: 13px;
+}
+.footer ul li a:hover {
+    color: cyan;
+}
+
+.footer ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background: cyan;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer ul li a:hover::after {
+    transform: scaleX(1);
+}
+
+.social form {
+    display: flex;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social form input {
+    width: 100%;
+    background: transparent;
+    color: #ccc;
+    border: 0;
+    outline: none;
+}
+
+.social form button {
+    background: transparent;
+    border: 0;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-icons a {
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.3);
+}
+
+.underline {
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+
+.underline span {
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: moving 1.5s linear infinite;
+}
+
+hr {
+    width: 90%;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin-bottom: 15px;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 13px;
+}
+
+@keyframes moving {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: calc(100% - 15px);
+    }
+}
+
+@media (max-width: 800px) {
+    .col, .col:nth-child(2), .col:nth-child(3) {
+        flex-basis: 46%;
+    }
+    .link ul {
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    .social form {
+        margin-bottom: 28px;
+    }
+    .footer ul li{
+        padding: 0;
+    }
+    .footer ul li a{
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer {
+        padding-top: 30px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .footer_logo {
+        max-width: 90px;
+        height: 55px;
+        width: 90px;
+        margin-bottom: 0px;
+        margin-left: 4px;
+    }
+    .row {
+        width: 80%;
+    }
+    .link{
+        display: none;
+    }
+    .col {
+        flex-basis: 100%;
+        padding: 0;
+    }
+    .col, .col:nth-child(2), .col:nth-child(3) {
+        flex-basis: 100%;
+    }
+    .social form {
+        margin-bottom: 6px;
+    }
+    .social-icons {
+        margin-top: 20px;
+        margin-bottom: 6px;
+    }
+    .copyright{
+        margin-top: 0;
+    }
+}

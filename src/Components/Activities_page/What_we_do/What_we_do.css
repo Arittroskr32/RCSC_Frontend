@@ -1,0 +1,210 @@
+.what_we_do {
+    width: 100vw;
+    height: 60vh;
+    margin: 4vh 0vw;
+}
+
+.what_we_do h1 {
+    font-size: 2.75rem;
+    margin: 4rem;
+    text-align: center;
+    color: white;
+}
+
+.what_we_do .what_we_do_main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.what_we_do .what_we_do_main .box {
+    width: 340px;
+    height: 280px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    z-index: 1;
+    
+}
+
+.what_we_do .what_we_do_main .box:hover {
+    background-color: #007BFF;
+    color: white;
+    border-color: #0056b3;
+    box-shadow: 6px 6px 15px rgba(0, 123, 255, 0.5);
+}
+
+/* Icon Styling */
+.what_we_do .what_we_do_main .box .icon {
+    position: absolute;
+    top: -41px;
+    left: 50%;
+    z-index: 9;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background: #007BFF;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    padding: 14px;
+}
+
+.what_we_do .what_we_do_main .box:hover .icon {
+    background: white;
+    color: #007BFF;
+    border: 1px solid rgb(198, 198, 198);
+}
+
+.what_we_do .what_we_do_main .box h2{
+    margin-top: 5vh;
+    font-size: 1.2rem;
+}
+
+.what_we_do .what_we_do_main .box p{
+    font-size: 0.9rem;
+    margin-top: 3vh;
+}
+
+
+/* responsive */
+
+@media(max-width:1024px){
+    .what_we_do .what_we_do_main .box {
+        width: 265px;
+        height: 250px;
+        padding: 10px;
+    }
+    .what_we_do .what_we_do_main .box h2{
+        margin-top: 6vh;
+        font-size: 1rem;
+    }
+    .what_we_do .what_we_do_main .box p {
+        font-size: 0.7rem;
+        margin-top: 2vh;
+    }
+    .what_we_do .what_we_do_main .box .icon {
+        position: absolute;
+        top: -38px;
+        left: 50%;
+        z-index: 9;
+        transform: translateX(-50%);
+        width: 70px;
+        height: 70px;
+        padding: 14px;
+    }
+    .what_we_do h1 {
+        font-size: 2rem;
+        margin-bottom: 7vh;
+        text-align: center;
+    }
+}
+
+@media(max-width:810px){
+    .what_we_do .what_we_do_main{
+        justify-content: space-evenly;
+    }
+    .what_we_do .what_we_do_main .box {
+        width: 190px;
+        height: 200px;
+        padding: 6px;
+    }
+    .what_we_do .what_we_do_main .box .icon {
+        top: -28px;
+        width: 50px;
+        height: 50px;
+        padding: 8px;
+    }
+    .what_we_do .what_we_do_main .box h2 {
+        margin-top: 4vh;
+        font-size: 0.7rem;
+    }
+    .what_we_do .what_we_do_main .box p {
+        font-size: 0.6rem;
+        margin-top: 14px;
+    }
+}
+
+@media(max-width: 500px){
+    .what_we_do {
+        height: auto; 
+        padding: 20px 0; 
+        margin-left: 0;
+    }
+    .what_we_do h1 {
+        font-size: 1.5rem; 
+        margin-bottom: 20px; 
+    }
+    .what_we_do .what_we_do_main {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding: 0 20px 20px; 
+        scroll-snap-type: x mandatory; 
+        -webkit-overflow-scrolling: touch; 
+    }
+    .what_we_do .what_we_do_main .box {
+        flex: 0 0 auto; 
+        width: 70%; 
+        height: 35vh; 
+        padding: 10px;
+        scroll-snap-align: start; 
+        border-radius: 15px; 
+        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .what_we_do .what_we_do_main .box .icon {
+        position: relative; 
+        top: 0; 
+        left: 0;
+        transform: none; 
+        width: 60px; 
+        height: 60px; 
+        padding: 10px; 
+        margin-bottom: 6px; 
+        background: #007BFF;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    }
+    .what_we_do .what_we_do_main .box h2 {
+        margin-top: 0; 
+        font-size: 1rem; 
+    }
+    .what_we_do .what_we_do_main .box p {
+        font-size: 0.8rem;
+        margin-top: 10px; 
+    }
+    .what_we_do .what_we_do_main::-webkit-scrollbar {
+        height: 8px; 
+    }
+    .what_we_do .what_we_do_main::-webkit-scrollbar-track {
+        background: #f1f1f1; 
+        border-radius: 10px; 
+    }
+    .what_we_do .what_we_do_main::-webkit-scrollbar-thumb {
+        background: #007BFF; 
+        border-radius: 10px; 
+    }
+    .what_we_do .what_we_do_main::-webkit-scrollbar-thumb:hover {
+        background: #0056b3; 
+    }
+}

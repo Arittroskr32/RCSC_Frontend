@@ -1,0 +1,547 @@
+/* ====== Page Background & Headings ====== */
+.member {
+    padding-top: 1vh;
+    background-color: #1f29379a;
+    background-attachment: fixed;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.member h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 6vh auto 3vh auto;
+    color: white;
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: 2px;
+    border-radius: 1rem;
+    padding: 1.5vh 0;
+    width: fit-content;
+    font-family: 'Space Grotesk', 'DM Sans', Arial, sans-serif;
+    transition: font-size 0.2s;
+}
+
+.member .mainh1{
+    color:white;
+    font-size: 2.75rem;
+    text-align: center;
+}
+
+.member h1:nth-child(1) {
+    padding: 2vh 0;
+}
+
+.member h1:nth-child(2) {
+    width: fit-content;
+    margin: 6vh auto 3vh auto;
+}
+
+.member .new-committee-h1 {
+    width: fit-content;
+    margin: 6vh auto 3vh auto;
+    padding: 2vh 2vw;
+    font-size: 2.25rem;
+    color: white;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 2px 32px #a855f755;
+    font-family: 'Space Grotesk', 'DM Sans', Arial, sans-serif;
+}
+
+.member .old-committee-h1{
+    width: fit-content;
+    margin: 6vh auto 3vh auto;
+    padding: 2vh 2vw;
+    font-size: 2.25rem;
+    color: white;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-shadow: 0 2px 32px #06b6d455;
+    font-family: 'Space Grotesk', 'DM Sans', Arial, sans-serif;
+}
+
+/* ====== Card Layouts ====== */
+.member .advisor,
+.member .new-committee-senior,
+.member .new-committee-junior,
+.member .previous-committee {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center; 
+    align-items: stretch;
+    max-width: 1300px;
+    margin: 0 auto 3vh auto;
+}
+
+.member .advisor{
+    gap: 5vw;
+}
+
+.member .new-committee-senior{
+    margin-bottom: 4vh;
+}
+
+.member .previous-committee{
+    margin-bottom: 6vh;
+}
+
+/* ====== Futuristic Gradient Glass Card ====== */
+.member-card-glass {
+    position: relative;
+    width: 19rem;
+    height: 25rem;
+    margin: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.5s cubic-bezier(.4,0,.2,1), box-shadow 0.4s;
+    z-index: 1;
+    box-shadow: 0 8px 32px 0 rgba(6, 182, 212, 0.10), 0 2px 8px rgba(0,0,0,0.18);
+}
+.member-card-glass:hover {
+    transform: scale(1.055) translateY(-0.8rem);
+    z-index: 2;
+    box-shadow: 0 12px 40px 0 rgba(168,85,247,0.18), 0 4px 16px rgba(0,0,0,0.22);
+}
+
+/* Gradient border glow */
+.member-card-glass .glass-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    border-radius: 1.7rem;
+    background: linear-gradient(120deg, #06b6d4 0%, #3b82f6 50%, #a855f7 100%);
+    filter: blur(22px);
+    opacity: 0.75;
+    transition: opacity 0.5s, filter 0.5s;
+    animation: card-pulse 2.5s infinite;
+    pointer-events: none;
+}
+.member-card-glass:hover .glass-bg {
+    opacity: 1;
+    filter: blur(32px);
+}
+@keyframes card-pulse {
+    0%, 100% { opacity: 0.75; }
+    50% { opacity: 1; }
+}
+
+/* Glass card content */
+.member-card-glass .glass-content {
+    position: relative;
+    z-index: 1;
+    background: rgba(24,28,47,0.98);
+    border-radius: 1.7rem;
+    padding: 2rem 1.3rem 1.3rem 1.3rem;
+    width: 19rem;
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 8px 32px 0 rgba(6, 182, 212, 0.13), 0 2px 8px rgba(0,0,0,0.22);
+    font-family: 'DM Sans', Arial, sans-serif;
+    border: 1.5px solid #232946;
+    transition: background 0.3s, border-color 0.3s;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+}
+.member-card-glass:hover .glass-content {
+    background: rgba(35,41,70,0.99);
+    border-color: #a855f7;
+}
+
+/* Header (series + roll) */
+.member-card-glass .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 1.3rem;
+}
+.member-card-glass .series {
+    color: #7dd3fc;
+    font-size: 1.05rem;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    transition: color 0.3s;
+    text-shadow: 0 1px 8px #06b6d455;
+    opacity: 0.92;
+}
+.member-card-glass:hover .series {
+    color: #a5f3fc;
+}
+.member-card-glass .roll {
+    background: #181c2f;
+    border: 1.5px solid #06b6d4;
+    color: #06b6d4;
+    padding: 0.28rem 1.1rem;
+    border-radius: 0.8rem;
+    font-size: 1.05rem;
+    font-family: monospace;
+    font-weight: bold;
+    box-shadow: 0 1px 8px #06b6d455;
+    transition: border-color 0.3s, color 0.3s, background 0.3s;
+    letter-spacing: 0.5px;
+    opacity: 0.93;
+}
+.member-card-glass:hover .roll {
+    border-color: #a855f7;
+    color: #a855f7;
+    background: #232946;
+}
+
+/* Avatar */
+.member-card-glass .avatar-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.3rem;
+    position: relative;
+}
+.member-card-glass .avatar-glow {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(90deg, #3b82f6, #a855f7);
+    filter: blur(18px);
+    opacity: 0.38;
+    z-index: 0;
+    transition: opacity 0.3s, filter 0.3s;
+}
+.member-card-glass img {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2.5px solid #232946;
+    object-fit: cover;
+    background: #181c2f;
+    z-index: 1;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 18px #06b6d455;
+}
+.member-card-glass:hover img {
+    border-color: #06b6d4;
+    box-shadow: 0 2px 28px #3b82f655;
+}
+.member-card-glass .avatar-wrap .status-dot {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    width: 26px;
+    height: 26px;
+    background: linear-gradient(135deg, #22c55e 60%, #4ade80 100%);
+    border-radius: 50%;
+    border: 2.5px solid #232946;
+    transition: background 0.3s, transform 0.3s;
+    z-index: 2;
+    box-shadow: 0 2px 8px #22c55e55;
+}
+.member-card-glass:hover .avatar-wrap .status-dot {
+    background: linear-gradient(135deg, #4ade80 60%, #22c55e 100%);
+    transform: scale(1.12);
+}
+
+/* Info (name, role, dept) */
+.member-card-glass .info {
+    text-align: center;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+}
+.member-card-glass .info .name {
+    font-family: 'Space Grotesk', serif;
+    font-weight: 700;
+    font-size: 1.45rem;
+    color: #f1f5f9;
+    margin-bottom: 0.3rem;
+    letter-spacing: 0.7px;
+    transition: color 0.3s, transform 0.3s;
+    text-shadow: 0 1px 8px #06b6d455;
+}
+.member-card-glass:hover .info .name {
+    color: #a5f3fc;
+    transform: scale(1.06);
+}
+.member-card-glass .info .role {
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: #3b82f6;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    font-size: 1.13rem;
+    letter-spacing: 0.2px;
+    transition: color 0.3s;
+    text-shadow: 0 1px 8px #3b82f655;
+}
+.member-card-glass:hover .info .role {
+    color: #a855f7;
+}
+.member-card-glass .info .dept {
+    font-family: 'DM Sans', Arial, sans-serif;
+    color: #cbd5e1;
+    font-size: 1.01rem;
+    transition: color 0.3s;
+    opacity: 0.93;
+}
+.member-card-glass:hover .info .dept {
+    color: #e0e0e0;
+    opacity: 1;
+}
+
+/* Social links */
+.member-card-glass .socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.3rem;
+}
+.member-card-glass .social-link {
+    position: relative;
+    padding: 0.7rem;
+    border-radius: 0.85rem;
+    display: flex;
+    align-items: center;
+    background: #232946;
+    border: 1.5px solid #3b82f6;
+    transition: box-shadow 0.3s, transform 0.3s, border-color 0.3s, background 0.3s;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 0 2px 8px #23294633;
+}
+.member-card-glass .social-link:hover {
+    box-shadow: 0 0 18px 0 #a855f755;
+    transform: scale(1.15) translateY(-0.2rem);
+    background: #1e293b;
+    border-color: #a855f7;
+}
+.member-card-glass .social-link .lucide {
+    width: 1.3rem;
+    height: 1.3rem;
+    z-index: 1;
+    transition: color 0.3s;
+}
+.member-card-glass .social-link .lucide[data-icon="linkedin"] {
+    color: #3b82f6;
+}
+.member-card-glass .social-link:hover .lucide[data-icon="linkedin"] {
+    color: #a855f7;
+}
+.member-card-glass .social-link .lucide[data-icon="github"] {
+    color: #e5e7eb;
+}
+.member-card-glass .social-link:hover .lucide[data-icon="github"] {
+    color: #fff;
+}
+
+/* --- Team Structure & Join Section --- */
+.team-structure,
+.join-section {
+    width: 92%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 48px 0 4rem 0;
+    border-radius: 1.5rem;
+    background: rgba(24,28,47,0.96);
+    box-shadow: 0 2px 32px 0 rgba(6, 182, 212, 0.09);
+    margin-bottom: 3rem;
+}
+
+.team-structure .subtitle,
+.join-section .subtitle {
+    font-family: 'Space Grotesk', serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    background: linear-gradient(90deg, #06b6d4 10%, #a855f7 90%);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    letter-spacing: 1.5px;
+}
+
+.team-structure .box {
+    background-color: #232946;
+    padding: 2.2rem;
+    border-radius: 1.2rem;
+    border: 1px solid #3b82f6;
+    text-align: left;
+    padding-bottom: 0;
+    box-shadow: 0 2px 24px #06b6d433;
+}
+
+.team-structure .sub-section {
+    margin-top: 2rem;
+}
+
+.team-structure .sub-section:first-child {
+    margin-top: 0;
+}
+
+.team-structure h3 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.team-structure h4 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: .75rem;
+    color: #a855f7;
+}
+
+.team-structure p,
+.team-structure ul {
+    color: #cbd5e0;
+    font-size: 1rem;
+}
+
+.team-structure ul {
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.team-structure li {
+    margin-bottom: 5px;
+}
+
+.join-section .details {
+    color: #cbd5e0;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.join-btn {
+    margin-top: 1.5rem;
+    display: inline-block;
+    padding: 13px 28px;
+    font-size: 1.08rem;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    background: linear-gradient(90deg, #00bcd4, #1e40af);
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(6, 182, 212, 0.18);
+    transition: transform 0.3s cubic-bezier(.4,0,.2,1), background 0.3s, box-shadow 0.3s;
+    border: none;
+    letter-spacing: 1.2px;
+}
+
+.join-btn:hover {
+    background: linear-gradient(90deg, #00acc1, #a855f7);
+    transform: translateY(-2px) scale(1.06);
+    box-shadow: 0px 0px 22px #a855f755;
+}
+
+.join-btn:focus {
+    border: 2px solid #a855f7; 
+    outline: 2px solid #00bcd4; 
+}
+
+/* ====== Responsive adjustments ====== */
+@media (max-width: 1100px) {
+    .member-card-glass,
+    .member-card-glass .glass-content {
+        width: 15rem;
+        height: 20rem;
+    }
+    .member-card-glass .info .name {
+        font-size: 1.05rem;
+    }
+    .member-card-glass img {
+        width: 60px;
+        height: 60px;
+    }
+    .member-card-glass .avatar-wrap .status-dot {
+        width: 18px;
+        height: 18px;
+        bottom: -5px;
+        right: -5px;
+    }
+    .team-structure,
+    .join-section {
+        padding: 24px 0 2rem 0;
+    }
+    .team-structure .box {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .member-card-glass,
+    .member-card-glass .glass-content {
+        width: 12rem;
+        height: 16rem;
+        padding: 0.5rem;
+    }
+    .member-card-glass .info .name {
+        font-size: 0.95rem;
+    }
+    .member-card-glass img {
+        width: 44px;
+        height: 44px;
+    }
+    .member-card-glass .avatar-wrap .status-dot {
+        width: 12px;
+        height: 12px;
+        bottom: -3px;
+        right: -3px;
+    }
+    .member-card-glass .info .role,
+    .member-card-glass .info .dept {
+        font-size: 0.8rem;
+    }
+    .team-structure,
+    .join-section {
+        padding: 12px 0 1rem 0;
+    }
+    .team-structure .box {
+        padding: 0.5rem;
+    }
+    .join-section .subtitle {
+        font-size: 1.1rem;
+    }
+    .join-btn {
+        padding: 10px 14px;
+        font-size: 0.95rem;
+    }
+    .member .advisor,
+    .member .new-committee-senior,
+    .member .new-committee-junior,
+    .member .previous-committee {
+        gap: 1rem;
+    }
+}
+
+@media(max-width:500px){
+    .member h1 {
+        font-size: 1rem;
+        width: 90%;
+    }
+    .member h1.new-committee-h1,
+    .member .old-committee-h1 {
+        text-align: center;
+        font-size: 1rem;
+        width: 90%;
+    }
+    .member .advisor,
+    .member .new-committee-senior,
+    .member .new-committee-junior,
+    .member .previous-committee {
+        gap: 0.5rem;
+    }
+    .member h1:nth-child(2) {
+        margin: 0vh auto;
+        margin-bottom: 2vh;
+    }
+}
